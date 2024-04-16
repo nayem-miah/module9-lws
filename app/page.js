@@ -2,7 +2,10 @@ import getJoke from "@/utils/getJoke";
 import dynamic from "next/dynamic";
 import { cookies } from 'next/headers'
 import RandomJoke from "./components/RandomJoke";
+import RandomJokeClient from "./components/RandomJokeClient";
 
+
+export const revalidate = 10;
 export default async function Home() {
 
 // // the 2 line code used to dynamic the 
@@ -18,6 +21,7 @@ export default async function Home() {
  
        {joke.value}
        <RandomJoke/>
+       <RandomJokeClient/>
 
     </main>
   );
