@@ -11,11 +11,10 @@ export const addUser = async (formData)=> {
         name,
         email,
     }
-
     try {
         await connectMongo();
         // insert into database
-        await new User(userData).save();
+        await new User(userData).save(); 
 
         // revalidate users
         revalidatePath("/");

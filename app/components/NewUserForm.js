@@ -1,4 +1,5 @@
 import { addUser } from "@/actions/user";
+import Button from "./Button";
 
 export default function NewUserForm() {
 
@@ -12,8 +13,7 @@ export default function NewUserForm() {
                 <input type="email" name="email" placeholder="Email" />
             </div>
             <div>
-                <button type="submit">Submit</button>
-            </div>
-        </form>
+                <Button/>     </div>
+        </form>   
     );
 }
